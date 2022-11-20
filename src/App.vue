@@ -1,10 +1,22 @@
 <template>
   <div id="app">
 <TabBar>
- <TabBarItem></TabBarItem>
-  <TabBarItem></TabBarItem>
-  <TabBarItem></TabBarItem>
-  <TabBarItem></TabBarItem>
+ <TabBarItem>
+   <img  slot="item-icon" src="./assets/img/tabbar/home.svg" alt="">
+   <div slot="item-text"> 首页</div>
+ </TabBarItem>
+  <TabBarItem>
+    <img  slot="item-icon" src="./assets/img/tabbar/category.svg" alt="">
+    <div slot="item-text">分类</div>
+  </TabBarItem>
+  <TabBarItem>
+    <img  slot="item-icon" src="./assets/img/tabbar/shopcart.svg" alt="">
+    <div slot="item-text"> 购物车</div>
+  </TabBarItem>
+  <TabBarItem>
+    <img  slot="item-icon" src="./assets/img/tabbar/profile.svg" alt="">
+    <div slot="item-text"> 我的</div>
+  </TabBarItem>
 
 
 </TabBar>
