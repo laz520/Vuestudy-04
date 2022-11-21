@@ -1,6 +1,6 @@
 <template>
 
-  <div class="tab-bar-item">
+  <div class="tab-bar-item" @click="itemClick">
 <!--    判断isactive是不是true  ， 不是就显示黑色的样式-->
     <div v-if="!IsActive">
       <slot name="item-icon"></slot>
@@ -19,9 +19,20 @@
 <script>
 export default {
   name: "TabBarItem",
+  props:{
+    path:String
+  },
   data() {
     return {
-      IsActive: true
+      IsActive: true,
+
+    }
+
+  },
+  methods:{
+    itemClick(){
+      console.log("点击了 ")
+      this.$router.replace(this.path).catch(err=>{})  //点击直接跳转到对应的入口
     }
   }
 }
